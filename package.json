@@ -1,0 +1,18 @@
+﻿{
+  "name": "premium-cat-store",
+  "version": "1.0.0",
+  "description": "Dropshipping store for premium cat equipment",
+  "main": "server.js",
+  "scripts": {
+    "build": "npx shopify hydrogen build",
+    "start": "node server.js",
+    "dev": "npx shopify hydrogen dev"
+  },
+  "dependencies": {
+    "@shopify/hydrogen": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "license": "MIT"
+}
