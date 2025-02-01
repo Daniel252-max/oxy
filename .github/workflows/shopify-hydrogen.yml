@@ -1,50 +1,28 @@
+name: Deploy Hydrogen Storefront
+
 on:
-    push:
-      branches: [ "main" ]
-    pull_request:
-      branches: [ "main" ]
-    workflow_dispatch:
-  
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-  
-      steps:
-        - name: 📥 Sjekker ut koden
-          uses: actions/checkout@v4
-  
-        - name: 🏗️ Setter opp Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 18
-            cache: 'npm'
-  
-        - name: 📦 Installerer dependencies
-          run: npm install
-  
-        - name: 🏗️ Bygger prosjektet
-          run: npm run build
-  
-        - name: ✅ Kjør tester
-          run: npm test
-  
-        - name: 🎨 Sjekker kodekvalitet med ESLint
-          run: npm run lint
-  
-    deploy:
-      needs: build
-      runs-on: ubuntu-latest
-  
-      steps:
-        - name: 📥 Sjekker ut koden
-          uses: actions/checkout@v4
-  
-        - name: 🚀 Installer Hydrogen CLI
-          run: npm install -g @shopify/cli @shopify/hydrogen
-  
-        - name: 🔑 Logg inn i Shopify
-          run: shopify login --store ${{ secrets.SHOPIFY_STORE }}
-  
-        - name: 📤 Deploy til Shopify Hydrogen Hosting
-          run: shopify hydrogen deploy --token=${{ secrets.SHOPIFY_DEPLOY_TOKEN }}
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sjekk ut koden
+        uses: actions/checkout@v4
+      - name: Sett opp Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Installer avhengigheter
+        run: npm install
+      - name: Bygg prosjektet
+        run: npm run build
+      - name: Deploy til Vercel
+        run: npx vercel --prod --token=$VERCEL_TOKEN
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
   
