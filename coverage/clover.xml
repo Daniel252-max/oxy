@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1738103547861" clover="3.2.0">
+  <project timestamp="1738103547861" name="All files">
+    <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5" elements="18" coveredelements="17" complexity="0" loc="10" ncloc="10" packages="2" files="3" classes="3"/>
+    <package name="ai">
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+      <file name="recommendationEngine.js" path="C:\Users\Daniel Hagen\OneDrive\TrendHunterAi\TrendHunterAI\TrendHunterAI\hydrogen-storefront\src\ai\recommendationEngine.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+      </file>
+      <file name="trendAnalyzer.js" path="C:\Users\Daniel Hagen\OneDrive\TrendHunterAi\TrendHunterAI\TrendHunterAI\hydrogen-storefront\src\ai\trendAnalyzer.js">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="logger.js" path="C:\Users\Daniel Hagen\OneDrive\TrendHunterAi\TrendHunterAI\TrendHunterAI\hydrogen-storefront\src\utils\logger.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
